@@ -1,5 +1,6 @@
 package com.example.androidcource
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -10,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val text = findViewById<TextView>(R.id.text_view)
+        val text = findViewById<TextView>(R.id.mainTextView)
         text.text = number.toString()
         number++
     }
@@ -20,6 +21,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onClick(view: View) {
-        
+        val intent: Intent = Intent(this, SquareActivity::class.java)
+        intent.putExtra("number", number)
+        startActivity(intent)
     }
 }
