@@ -11,43 +11,44 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.25"
+        android:layout_weight="1"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/square_result"
-            android:textSize="60sp"
+            android:textSize="50sp"
             android:textAlignment="center"
+            android:text="Square result:"
             android:gravity="center_horizontal" />
 
         <TextView
-            android:id="@+id/text_view"
+            android:id="@+id/squareResult"
             android:layout_width="wrap_content"
-            android:layout_height="240dp"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="@string/_0"
+            android:layout_height="wrap_content"
+            android:text="@string/null_result"
             android:textSize="100sp"
-            android:textAlignment="center"/>
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:layout_margin="50dp"/>
+
     </LinearLayout>
-
-
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1">
 
         <Button
-            android:id="@+id/buttonToMain"
-            style="?android:attr/borderlessButtonStyle"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:gravity="bottom"
+            android:text="To main"
+            android:textSize="30sp"
             android:onClick="onClick"
-            android:text="@string/get_square"
-            android:textSize="30sp" />
+            />
+
     </LinearLayout>
+
 </LinearLayout>
