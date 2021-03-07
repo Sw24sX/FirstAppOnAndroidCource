@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity() {
         Log.d(TAG, "On pause (Main activity)")
     }
 
+
+
     override fun onStop() {
         super.onStop()
         Log.d(TAG, "On stop (Main activity)")
