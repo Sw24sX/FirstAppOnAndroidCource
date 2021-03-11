@@ -9,22 +9,19 @@ import android.util.Log
 
 class MainActivity : AppCompatActivity() {
     val TAG: String = "MyLogs"
+    lateinit var text: TextView;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         Log.d(TAG, "On create (Main activity)")
-        val text = findViewById<TextView>(R.id.mainTextView)
-        number++
-        text.text = number.toString()
+        text = findViewById(R.id.mainTextView)
     }
 
     override fun onPause() {
         super.onPause()
         Log.d(TAG, "On pause (Main activity)")
     }
-
-
 
     override fun onStop() {
         super.onStop()
@@ -38,6 +35,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        number++
+        text.text = number.toString()
         Log.d(TAG, "On resume (Main activity)")
     }
 
